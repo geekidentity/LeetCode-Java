@@ -4,6 +4,8 @@ package com.geekidentity.leetcode.offer.sort;
  * 排序
  * 剑指 Offer 45. 把数组排成最小的数
  * https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/
+ *
+ * 一个有效的比较规则需要3个条件：自反性、对称性、传递性
  */
 public class Offer45MinNumber {
     public String minNumber(int[] nums) {
