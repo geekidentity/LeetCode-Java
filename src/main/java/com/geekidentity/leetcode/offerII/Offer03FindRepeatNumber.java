@@ -5,7 +5,7 @@ package com.geekidentity.leetcode.offerII;
  * 剑指 Offer 03. 数组中重复的数字
  * https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
  */
-public class Offer02FindRepeatNumber {
+public class Offer03FindRepeatNumber {
 
     public int findRepeatNumber(int[] nums) {
         if (nums == null) {
