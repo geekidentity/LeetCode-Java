@@ -18,6 +18,7 @@ public class Offer16MyPow {
             if ((b & 1) == 1) {
                 result *= x;
             }
+            //  x = x^2
             x *= x;
             b >>= 1;
         }
