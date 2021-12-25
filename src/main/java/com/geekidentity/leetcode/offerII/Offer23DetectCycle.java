@@ -42,7 +42,7 @@ public class Offer23DetectCycle {
         return null;
     }
 
-    static class ListNode {
+    private static class ListNode {
        int val;
        ListNode next;
        ListNode(int x) {
