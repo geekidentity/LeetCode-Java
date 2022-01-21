@@ -3,6 +3,9 @@ package com.geekidentity.leetcode.offerII;
 /**
  * 剑指 Offer 35. 复杂链表的复制
  * https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/
+ * 1. 复制原始链表的任意节点N并创建新节点N'，再把N'链接到N的后面。
+ * 2. 设置手复制出来的sibling。
+ * 3. 把这个长链表拆分成2个链表：把奇数位置的节点用next链接起来就是原始链表，把偶数位置的节点用next链接起来就是复制出的的链表。
  */
 public class Offer35CopyRandomList {
     public Node copyRandomList(Node head) {
