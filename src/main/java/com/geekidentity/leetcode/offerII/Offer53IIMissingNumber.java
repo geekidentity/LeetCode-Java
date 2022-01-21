@@ -5,7 +5,7 @@ package com.geekidentity.leetcode.offerII;
  * 剑指 Offer 53 - II. 0～n-1中缺失的数字
  * https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
  */
-public class Offer35IIMissingNumber {
+public class Offer53IIMissingNumber {
     public int missingNumber(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
