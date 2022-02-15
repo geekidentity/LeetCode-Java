@@ -6,6 +6,7 @@ import java.util.*;
  * 搜索与回溯算法
  * 剑指 Offer 32 - II. 从上到下打印二叉树 II
  * https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/
+ * 分层需要知道，当前层应该从有多少个节点。
  */
 public class Offer32IILevelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
