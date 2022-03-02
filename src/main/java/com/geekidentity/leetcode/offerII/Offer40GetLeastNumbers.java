@@ -14,18 +14,18 @@ public class Offer40GetLeastNumbers {
             return new int[0];
         }
 
-        Queue<Integer> maxStack = new PriorityQueue<>((a, b) -> b - a);
+        Queue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
         for (int i : arr) {
-            if (maxStack.size() < k) {
-                maxStack.offer(i);
-            } else if (!maxStack.isEmpty() && maxStack.peek() > i) {
-                maxStack.poll();
-                maxStack.offer(i);
+            if (maxHeap.size() < k) {
+                maxHeap.offer(i);
+            } else if (!maxHeap.isEmpty() && maxHeap.peek() > i) {
+                maxHeap.poll();
+                maxHeap.offer(i);
             }
         }
-        int[] result = new int[maxStack.size()];
+        int[] result = new int[maxHeap.size()];
         int i = 0;
-        for (Integer n : maxStack) {
+        for (Integer n : maxHeap) {
             result[i++] = n;
         }
         return result;
