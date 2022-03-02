@@ -18,7 +18,7 @@ public class Offer40GetLeastNumbers {
         for (int i : arr) {
             if (maxStack.size() < k) {
                 maxStack.offer(i);
-            } else if (maxStack.peek() > i) {
+            } else if (!maxStack.isEmpty() && maxStack.peek() > i) {
                 maxStack.poll();
                 maxStack.offer(i);
             }
