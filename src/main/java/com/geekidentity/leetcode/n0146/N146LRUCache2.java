@@ -1,10 +1,11 @@
-package com.geekidentity.leetcode;
+package com.geekidentity.leetcode.n0146;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * https://leetcode-cn.com/problems/lru-cache/
+ * 解题版
  */
 public class N146LRUCache2 {
     static class LinkedNode {

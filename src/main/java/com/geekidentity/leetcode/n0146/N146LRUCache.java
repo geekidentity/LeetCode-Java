@@ -1,4 +1,4 @@
-package com.geekidentity.leetcode;
+package com.geekidentity.leetcode.n0146;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
