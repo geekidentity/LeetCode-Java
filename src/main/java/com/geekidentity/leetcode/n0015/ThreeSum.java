@@ -29,11 +29,13 @@ public class ThreeSum {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
+            // 去掉重复情况
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             for (int j = i + 1, k = nums.length - 1; j < k;) {
                 int target = -nums[i];
                 int sum = nums[j] + nums[k];
                 if (sum == target) {
+                    // 加 left，减小 right，但是不能重复，比如: [-2, -1, -1, -1, 3, 3, 3], i = 0, left = 1, right = 6, [-2, -1, 3] 的答案加入后，需要排除重复的 -1 和 3
                     result.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
                     k--;
