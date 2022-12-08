@@ -27,28 +27,24 @@ public class ThreeSum {
 
     public List<List<Integer>> threeSum2(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
+        if (nums.length < 3) return result;
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; i++) {
-            // 去掉重复情况
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
-            for (int j = i + 1, k = nums.length - 1; j < k;) {
-                int target = -nums[i];
-                int sum = nums[j] + nums[k];
-                if (sum == target) {
-                    // 加 left，减小 right，但是不能重复，比如: [-2, -1, -1, -1, 3, 3, 3], i = 0, left = 1, right = 6, [-2, -1, 3] 的答案加入后，需要排除重复的 -1 和 3
-                    result.add(Arrays.asList(nums[i], nums[j], nums[k]));
-                    j++;
-                    k--;
-                    while (j < k && nums[j] == nums[j - 1]) {
-                        j++;
-                    }
-                    while (j < k && nums[k] == nums[k + 1]) {
-                        k--;
-                    }
-                } else if (sum < target) {
-                    j++;
+            if (nums[i] > 0) continue;
+            if (i > 0 && nums[i] == nums[i - 1]) i++;
+            int left = i + 1, right = nums.length - 1;
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                if (sum > 0) {
+                    right--;
+                } else if (sum < 0) {
+                    left++;
                 } else {
-                    k--;
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    while (left < right && nums[left] == nums[left + 1]) left++;
+                    while (left < right && nums[right] == nums[right - 1]) right--;
+                    left++;
+                    right--;
                 }
             }
         }
